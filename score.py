@@ -8,8 +8,12 @@ Original file is located at
 """
 
 data = input().split()
-count = 0
+minimum = int(data[0])
+maximum = int(data[0])
 for i in data:
-  if int(i)<60:
-    count+=1
-print(count)
+  if int(i) > maximum:
+    maximum = int(i)
+  elif int(i) < minimum:
+    minimum = int(i)
+print(f'Minimum number is {minimum}')
+print(f'Maximum number is {maximum}')
